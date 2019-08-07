@@ -8,49 +8,11 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href="assets/css/modbootstrapstyle.css">
-
-
 
     <title>TriviaGame</title>
 </head>
 
-
-
-
-<!-- ### Option One: Basic Quiz (Timed Form)
-
-![Basic](Images/1-basic.jpg)
-
-**[Click Here to Watch the Demo](https://youtu.be/fBIj8YsA9dk)**.
-
-* You'll create a trivia form with multiple choice or true/false options (your choice).
-
-* The player will have a limited amount of time to finish the quiz. 
-
-  * The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
-
-* Don't let the player pick more than one answer per question.
-
-* Don't forget to include a countdown timer. -->
-
-<!-- ### Option Two: Advanced Assignment (Timed Questions)
-
-![Advanced](Images/2-advanced.jpg)
-
-**[Click Here to Watch the demo](https://youtu.be/xhmmiRmxQ8Q)**.
-
-* You'll create a trivia game that shows only one question until the player answers it or their time runs out.
-
-* If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
-
-* The scenario is similar for wrong answers and time-outs.
-
-  * If the player runs out of time, tell the player that time's up and display the correct answer. Wait a few seconds, then show the next question.
-  * If the player chooses the wrong answer, tell the player they selected the wrong option and then display the correct answer. Wait a few seconds, then show the next question.
-
-* On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page). -->
 
 
 <body class="d-flex flex-column h-90">
@@ -65,43 +27,51 @@
 
             <div class="col-10">
 
-                <!-- First Display Row - Avenerger Image and Trivia Game Text -->
+                <!-- First Display Rows - Avenerger Image and Trivia Game Text -->
                 <div class="row">
 
-                    <div class="col-6">
+                    <div class="col-12">
                         <img src="assets/images/avengers.png" alt="marvel avengers" class="indeximageviewchanges"
                             height="300px" width="auto">
                     </div>
 
+                </div>
 
-                    <div class="col-6 mt-5">
-                        <p class="titleText text-warning">Trivia Game!</p>
-                        <p class="h3 text-danger">With your host, Deadpool! &lt3 </p>
+                <!-- title text - Trivia Game! With your host, Deadpool! <3 -->
+                <div class="row">
+
+                    <div class="col-12 mt-0 pt-0">
+                        <p class="titleText text-warning text-center" id="titleScale1">Trivia Game!</p>
+                        <p class="h3 text-danger text-center" id="titleScale2">With your host, Deadpool! &lt3 </p>
 
                     </div>
                 </div>
 
 
+                <!-- GAME AREA ROWS -->
+                <div class="row questionDisplay mx-auto p-3">
 
-                <!-- GAME AREA -->
-                <div class="row questionDisplay mb-3">
-
-                    <div class="col-12 m-3">
-
-                        <!-- why dosent class - > mx-auto work to center button with fixed width?? -->
-                        <button id="start" type="button" class="btn btn-danger">Play Marvel Trivia! </button>
+                    <div class="col-12">
 
                         <!-- Display Current Question -->
-                        <div class="float-right mr-5 h3" id="questionArea"></div>
+                        <div class="row">
+                            <div class="float h3 mx-auto" id="questionArea"></div>
+
+                        </div>
+
                         <!-- Display Answer Options -->
-                        <br>
-                        <div class="float-right mr-5 h2" id="answersArea1"></div>
-                        <div class="float-right mr-5 h2" id="answersArea2"></div>
+                        <div class="row">
+                            <div class="float h2 mx-auto" id="answersArea1"></div>
+                            <div class="float h2 mx-auto" id="answersArea2"></div>
 
+                        </div>
 
+                        <!-- Start button / timer  -->
+                        <div class="row">
 
-
-
+                            <button class="btn btn-danger my-3 mx-auto" id="start" type="button">Play Marvel Trivia!
+                            </button>
+                        </div>
 
                     </div>
 
@@ -112,7 +82,7 @@
 
             <div class="col-1"></div>
 
-        </div>   
+        </div>
 
     </main>
     <!-- MAIN _ End -->
@@ -121,8 +91,8 @@
 
     <!-- STICKY FOOTER BOOTSTRAP  with additional Deadpool image in footer-->
     <footer class="footer mt-auto my-2">
-        <img src="assets/images/deadpool-arms.png" alt="Thomas White" class="indeximageviewchanges my-4" height="200px"
-            width="auto">
+        <img class="indeximageviewchanges my-4" id="footerDeadPool" src="assets/images/deadpool-arms.png"
+            alt="Thomas White" height="200px" width="auto">
     </footer>
     <footer class="footer mt-auto py-1 bg-dark">
         <div class="container">

@@ -1,10 +1,12 @@
-
 /* MOD BootStrap Style */
+
 body {
     background: url("../images/space.jpg");
     background-size: cover;
 }
+
 /* sticky footer */
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -12,14 +14,12 @@ body {
     width: 100%;
     text-align: center;
 }
+
 #maincontainerindexpage {
     width: 85%;
-    margin: 3% auto;
+    padding-top: 0px;
+    margin: 0% auto 20% auto;
 }
-
-
-
-/*  New CSS Classes */
 
 .titleText {
     font-family: 'Georgia', Times, Times New Roman, serif;
@@ -34,17 +34,10 @@ body {
 #answersArea1:hover {
     background-color: blue;
 }
+
 #answersArea2:hover {
     background-color: blue;
 }
-
-
-
-
-/* Altered - deleted a lot for this Trivia Game Project- trying to use more bootstrap instead*/
-
-
-
 
 p {
     margin-top: 0;
@@ -65,17 +58,9 @@ p {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-/* button {
-    background-color: #aaa84a;
-    color: rgba(255, 255, 255, 0.986);
-    padding: 8px 24px;
-    margin-top: 10px;
-} */
-
-
 /* ___________________________ */
-/* ~~~ _  Media Queries  _ ~~~ */
 
+/* ~~~ _  Media Queries  _ ~~~ */
 
 /*  ~~~~980px~~~~~~~ */
 
@@ -95,16 +80,28 @@ p {
 /*  ~~~~768px~~~~~~~ */
 
 @media screen and (max-width: 768px) {
-    
+    body {
+        min-height: 100%;
+    }
     .indeximageviewchanges {
-        width: 50%;
+        width: 100%;
         height: auto;
     }
-    p {
-        font-size: 18px;
-        line-height: 27px;
+    p, #questionArea, #answersArea1, #answersArea2, h2, h3, h4, h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #titleScale1 {
+        font-size: 50px;
+    }
+    #titleScale2 {
+        font-size: 20px;
     }
     #portfolioPageViews {
+        width: auto;
+    }
+    #footerDeadPool {
+        height: 100px;
         width: auto;
     }
 }
@@ -113,7 +110,7 @@ p {
 
 @media screen and (max-width: 640px) {
     .indeximageviewchanges {
-        float: none;
+        /* float: none; */
         width: 100%;
         height: auto;
     }
